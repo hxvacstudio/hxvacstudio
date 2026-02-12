@@ -11,14 +11,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=7">
+  <!-- Cache-bust: bump v= if updates don't show -->
+  <link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
 
   <!-- NAV -->
   <header class="topbar">
     <div class="nav-wrap">
-      <a class="brand" href="#home">
+      <a class="brand" href="#home" aria-label="Hxvac Studio home">
         <img src="assets/logo.png" alt="Hxvac Studio logo" class="brand-logo">
       </a>
 
@@ -27,6 +28,7 @@
         <a href="#examples">Example Shorts</a>
         <a href="#bundles">Bundles</a>
         <a href="#reviews">Reviews</a>
+        <a href="#addme">Add Me</a>
       </nav>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -44,8 +46,8 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <main id="home">
+    <!-- HERO -->
     <section class="hero" aria-label="Hero banner"></section>
 
     <!-- Proof pills -->
@@ -57,27 +59,38 @@
       </div>
     </section>
 
-    <!-- EXAMPLES -->
+    <!-- EXAMPLE SHORTS (Embeds) -->
     <section id="examples" class="section section-soft">
       <h2 class="section-title">EXAMPLE SHORTS</h2>
 
       <div class="container">
-        <div class="example-grid">
-          <!-- Replace href with your real links -->
-          <a class="example-card reveal" href="#" target="_blank" rel="noreferrer">
-            <div class="example-title">Example 1</div>
-            <div class="example-sub">Watch</div>
-          </a>
+        <div class="video-grid">
+          <div class="video-card reveal">
+            <iframe
+              src="https://www.youtube.com/embed/zDeNb8e52jc"
+              title="Example Short 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
 
-          <a class="example-card reveal" href="#" target="_blank" rel="noreferrer">
-            <div class="example-title">Example 2</div>
-            <div class="example-sub">Watch</div>
-          </a>
+          <div class="video-card reveal">
+            <iframe
+              src="https://www.youtube.com/embed/WmLmSFz94vs"
+              title="Example Short 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
 
-          <a class="example-card reveal" href="#" target="_blank" rel="noreferrer">
-            <div class="example-title">Example 3</div>
-            <div class="example-sub">Watch</div>
-          </a>
+          <div class="video-card reveal">
+            <iframe
+              src="https://www.youtube.com/embed/ROsUu9nxHYM"
+              title="Example Short 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -89,66 +102,46 @@
       <div class="container">
         <div class="bundle-grid">
 
-          <!-- 1 -->
           <div class="bundle-card reveal">
             <img src="assets/bundle-1.png" alt="1 bundle" class="bundle-img">
             <div class="bundle-actions">
-              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">Pay Now</a>
-              <a class="btn btn-ghost" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">
-                <span class="icon robux" aria-hidden="true"></span> Robux Option
-              </a>
+              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
-          <!-- 3 -->
           <div class="bundle-card reveal">
             <img src="assets/bundle-3.png" alt="3 bundle" class="bundle-img">
             <div class="bundle-actions">
-              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">Pay Now</a>
-              <a class="btn btn-ghost" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">
-                <span class="icon robux" aria-hidden="true"></span> Robux Option
-              </a>
+              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
-          <!-- 5 -->
           <div class="bundle-card featured reveal">
             <div class="badge">Most Popular</div>
             <img src="assets/bundle-5.png" alt="5 bundle" class="bundle-img">
             <div class="bundle-actions">
-              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">Pay Now</a>
-              <a class="btn btn-ghost" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">
-                <span class="icon robux" aria-hidden="true"></span> Robux Option
-              </a>
+              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
-          <!-- 10 -->
           <div class="bundle-card reveal">
             <img src="assets/bundle-10.png" alt="10 bundle" class="bundle-img">
             <div class="bundle-actions">
-              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">Pay Now</a>
-              <a class="btn btn-ghost" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">
-                <span class="icon robux" aria-hidden="true"></span> Robux Option
-              </a>
+              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
-          <!-- Video+ -->
           <div class="bundle-card reveal">
             <img src="assets/bundle-video.png" alt="Video + short bundle" class="bundle-img">
             <div class="bundle-actions">
-              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">Pay Now</a>
-              <a class="btn btn-ghost" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">
-                <span class="icon robux" aria-hidden="true"></span> Robux Option
-              </a>
+              <a class="btn" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
         </div>
 
         <p class="fineprint">
-          Click <b>Pay Now</b> or <b>Robux Option</b> to join the server and open a ticket. Payment happens through Discord.
+          Click <b>ORDER HERE</b> to join the server and open a ticket. Payment happens through Discord.
         </p>
       </div>
     </section>
@@ -182,6 +175,7 @@
     </footer>
   </main>
 
-  <script src="script.js?v=7"></script>
+  <!-- Cache-bust: bump v= if updates don't show -->
+  <script src="script.js?v=20"></script>
 </body>
 </html>
