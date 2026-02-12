@@ -86,8 +86,9 @@ body{
 }
 .mobile-menu a:hover{opacity:1;}
 .pill-link{border-top:1px solid rgba(255,255,255,.12); margin-top:6px; padding-top:14px;}
+.mobile-menu.open{display:block;}
 
-/* Hero */
+/* Hero (1920x800) */
 .hero{
   height:800px;
   background:url("assets/hero.jpg") right top / cover no-repeat;
@@ -235,9 +236,7 @@ body{
 }
 
 /* Add me */
-.addme{
-  text-align:center;
-}
+.addme{text-align:center;}
 .addme-line{
   font-size:28px;
   font-weight:900;
@@ -269,16 +268,62 @@ body{
   opacity:.9;
 }
 
+/* Robux icon */
+.icon{
+  display:inline-block;
+  width:18px;
+  height:18px;
+  margin-right:8px;
+  vertical-align:-3px;
+}
+.icon.robux{
+  width:18px;
+  height:18px;
+  position:relative;
+}
+.icon.robux::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:2px solid #111;
+  border-radius:4px;
+  transform:rotate(45deg);
+  background:transparent;
+}
+.icon.robux::after{
+  content:"";
+  position:absolute;
+  width:7px;
+  height:7px;
+  border:2px solid #111;
+  border-radius:2px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(45deg);
+  background:transparent;
+}
+
+/* Fade / pop-in animation */
+.reveal{
+  opacity:0;
+  transform:translateY(14px) scale(0.98);
+  transition:opacity .6s ease, transform .6s ease;
+  will-change:opacity, transform;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
 /* Responsive */
 @media (max-width: 960px){
   .bundle-grid{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
   .example-grid{grid-template-columns:1fr;}
   .section-title{font-size:34px;}
-  .hero{height:420px;}
+  .hero{height:520px;}
 }
 @media (max-width: 720px){
   .nav-links{display:none;}
   .nav-toggle{display:block;}
-  .mobile-menu.open{display:block;}
 }
