@@ -89,8 +89,8 @@ body{
 
 /* Hero */
 .hero{
-  height:520px;
-  background:url("assets/hero.jpg") center/cover no-repeat;
+  height:800px;
+  background:url("assets/hero.jpg") right top / cover no-repeat;
 }
 
 /* Pills */
