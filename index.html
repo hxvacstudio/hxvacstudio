@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hxvac Studio — Content Commissions</title>
-  <meta name="description" content="Hxvac Studio — Short-form editing & content repurposing." />
+  <meta name="description" content="Hxvac Studio — short-form editing & content repurposing." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Cache-bust: bump v= if updates don't show -->
-  <link rel="stylesheet" href="style.css?v=20">
+  <!-- Cache-bust: bump v if site is stubborn -->
+  <link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
 
@@ -23,12 +23,12 @@
         <img src="assets/logo.png" alt="Hxvac Studio logo" class="brand-logo">
       </a>
 
-      <nav class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#examples">Example Shorts</a>
-        <a href="#bundles">Bundles</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#addme">Add Me</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#examples" class="nav-link">Example Shorts</a>
+        <a href="#bundles" class="nav-link">Bundles</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#addme" class="nav-link">Add Me</a>
       </nav>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -47,19 +47,42 @@
   </header>
 
   <main id="home">
-    <!-- HERO -->
-    <section class="hero" aria-label="Hero banner"></section>
+    <!-- HERO (Layered) -->
+    <section class="hero2" aria-label="Hero banner">
+      <!-- Background base -->
+      <img class="hero2-layer bg fadeBase" src="assets/concrete-background1.jpg" alt="" aria-hidden="true">
 
-    <!-- Proof pills -->
-    <section class="pills-section">
-      <div class="pills">
-        <div class="pill">175M+ combined views</div>
-        <div class="pill">100K+ YouTube subscribers</div>
-        <div class="pill">Fast turnaround</div>
+      <!-- Bottom decorative layers -->
+      <img class="hero2-layer fadeDots fadeBase" src="assets/fadeddotpattern-2.png" alt="" aria-hidden="true">
+      <img class="hero2-layer darkDots fadeBase" src="assets/darkdotpattern-1.png" alt="" aria-hidden="true">
+      <img class="hero2-layer marker fadeBase" src="assets/markerarrow-1.png" alt="" aria-hidden="true">
+
+      <!-- Robux icons (parallax targets) -->
+      <img class="hero2-layer robux r1 float parallax" data-depth="10" src="assets/robuxicon-1.png" alt="" aria-hidden="true">
+      <img class="hero2-layer robux r2 float parallax" data-depth="16" src="assets/robuxicon-2.png" alt="" aria-hidden="true">
+      <img class="hero2-layer robux r3 float parallax" data-depth="12" src="assets/robuxicon-3.png" alt="" aria-hidden="true">
+
+      <!-- Avatar -->
+      <img class="hero2-layer avatar pop parallax" data-depth="6" src="assets/avatar-1.png" alt="Hxvac Studio avatar">
+
+      <!-- Text -->
+      <div class="hero2-layer text swoosh">
+        <h1>LEVEL UP YOUR<br>CONTENT TODAY!</h1>
+
+        <div class="hero-cta-row">
+          <a class="btn hero-btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
+          <span class="cta-sub">Join the Discord → open a ticket → pay via PayPal/Robux</span>
+        </div>
+
+        <div class="hero-pills">
+          <div class="pill">175M+ combined views</div>
+          <div class="pill">100K+ YouTube subscribers</div>
+          <div class="pill">Fast turnaround</div>
+        </div>
       </div>
     </section>
 
-    <!-- EXAMPLE SHORTS (Embeds) -->
+    <!-- EXAMPLE SHORTS -->
     <section id="examples" class="section section-soft">
       <h2 class="section-title">EXAMPLE SHORTS</h2>
 
@@ -103,14 +126,14 @@
         <div class="bundle-grid">
 
           <div class="bundle-card reveal">
-            <img src="assets/bundle-1.png" alt="1 bundle" class="bundle-img">
+            <img src="assets/bundle-1.png" alt="Bundle 1" class="bundle-img">
             <div class="bundle-actions">
               <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
           <div class="bundle-card reveal">
-            <img src="assets/bundle-3.png" alt="3 bundle" class="bundle-img">
+            <img src="assets/bundle-3.png" alt="Bundle 3" class="bundle-img">
             <div class="bundle-actions">
               <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
@@ -118,21 +141,21 @@
 
           <div class="bundle-card featured reveal">
             <div class="badge">Most Popular</div>
-            <img src="assets/bundle-5.png" alt="5 bundle" class="bundle-img">
+            <img src="assets/bundle-5.png" alt="Bundle 5" class="bundle-img">
             <div class="bundle-actions">
               <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
           <div class="bundle-card reveal">
-            <img src="assets/bundle-10.png" alt="10 bundle" class="bundle-img">
+            <img src="assets/bundle-10.png" alt="Bundle 10" class="bundle-img">
             <div class="bundle-actions">
               <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
           </div>
 
           <div class="bundle-card reveal">
-            <img src="assets/bundle-video.png" alt="Video + short bundle" class="bundle-img">
+            <img src="assets/bundle-video.png" alt="Video + shorts bundle" class="bundle-img">
             <div class="bundle-actions">
               <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
             </div>
@@ -141,7 +164,7 @@
         </div>
 
         <p class="fineprint">
-          Click <b>ORDER HERE</b> to join the server and open a ticket. Payment happens through Discord.
+          Click <b>ORDER HERE</b> → join the server → open a ticket.
         </p>
       </div>
     </section>
@@ -175,7 +198,7 @@
     </footer>
   </main>
 
-  <!-- Cache-bust: bump v= if updates don't show -->
-  <script src="script.js?v=20"></script>
+  <!-- Cache-bust: bump v if needed -->
+  <script src="script.js?v=30"></script>
 </body>
 </html>
