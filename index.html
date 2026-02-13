@@ -2,225 +2,180 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hxvac Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hxvac Studio — Content Commissions</title>
+  <meta name="description" content="Hxvac Studio — Short-form editing & content repurposing." />
 
-  <!-- Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Cache-bust: bump v= if updates don't show -->
+  <link rel="stylesheet" href="style.css?v=20">
 </head>
-
 <body>
+
   <!-- NAV -->
   <header class="topbar">
-    <div class="navwrap">
-      <a class="brand" href="#home" aria-label="Hxvac Studio Home">
-        <img src="assets/logo.png" alt="Hxvac Studio" />
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Hxvac Studio home">
+        <img src="assets/logo.png" alt="Hxvac Studio logo" class="brand-logo">
       </a>
 
-      <nav class="navlinks" aria-label="Primary navigation">
-        <a href="#home" class="navlink">Home</a>
-        <a href="#examples" class="navlink">Example Shorts</a>
-        <a href="#bundles" class="navlink">Bundles</a>
-        <a href="#reviews" class="navlink">Reviews</a>
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#examples">Example Shorts</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#addme">Add Me</a>
       </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#examples">Example Shorts</a>
+      <a href="#bundles">Bundles</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#addme" class="pill-link">Add Me</a>
     </div>
   </header>
 
-  <!-- HERO (LAYERED) -->
-  <section class="hero2" id="home">
-    <!-- Layer order you listed (top-most last via z-index + DOM order) -->
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero banner"></section>
 
-    <!-- concrete-background1 -->
-    <img class="hero2-layer bg" src="assets/concrete-background1.jpg" alt="">
-
-    <!-- fadeddotpattern-2 -->
-    <img class="hero2-layer fadeddots" src="assets/fadeddotpattern-2.png" alt="">
-
-    <!-- darkdotpattern-1 -->
-    <img class="hero2-layer darkdots" src="assets/darkdotpattern-1.png" alt="">
-
-    <!-- markerarrow-1 -->
-    <img class="hero2-layer arrow" src="assets/markerarrow-1.png" alt="">
-
-    <!-- robux icons -->
-    <img class="hero2-layer robux r1" src="assets/robuxicon-1.png" alt="">
-    <img class="hero2-layer robux r2" src="assets/robuxicon-2.png" alt="">
-    <img class="hero2-layer robux r3" src="assets/robuxicon-3.png" alt="">
-
-    <!-- avatar -->
-    <img class="hero2-layer avatar" src="assets/avatar-1.png" alt="">
-
-    <!-- TEXT -->
-    <div class="hero2-content">
-      <h1 class="hero2-title">LEVEL UP YOUR<br>CONTENT TODAY!</h1>
-
-      <div class="hero2-actions">
-        <a class="btn primary" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noopener">
-          ORDER HERE
-        </a>
-        <span class="hero2-sub">Join the Discord → open a ticket → pay via PayPal/Robux</span>
+    <!-- Proof pills -->
+    <section class="pills-section">
+      <div class="pills">
+        <div class="pill">175M+ combined views</div>
+        <div class="pill">100K+ YouTube subscribers</div>
+        <div class="pill">Fast turnaround</div>
       </div>
+    </section>
 
-      <div class="hero2-badges">
-        <span class="badge">175M+ combined views</span>
-        <span class="badge">100K+ YouTube subscribers</span>
-        <span class="badge">Fast turnaround</span>
-      </div>
-    </div>
-  </section>
+    <!-- EXAMPLE SHORTS (Embeds) -->
+    <section id="examples" class="section section-soft">
+      <h2 class="section-title">EXAMPLE SHORTS</h2>
 
-  <!-- SECTION: EXAMPLE SHORTS -->
-  <section class="section" id="examples">
-    <h2 class="section-title reveal">EXAMPLE SHORTS</h2>
-
-    <div class="examples reveal">
-      <!-- YouTube Shorts embeds -->
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/zDeNb8e52jc"
-          title="Example Short 1"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/WmLmSFz94vs"
-          title="Example Short 2"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/ROsUu9nxHYM"
-          title="Example Short 3"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION: BUNDLES -->
-  <section class="section alt" id="bundles">
-    <h2 class="section-title reveal">BUNDLES</h2>
-
-    <div class="grid reveal">
-      <!-- 1 -->
-      <article class="card">
-        <img src="assets/bundle-1.png" alt="Bundle 1" class="card-img" />
-        <div class="card-body">
-          <h3 class="card-title">1 VIDEO</h3>
-          <p class="card-sub">15–30 seconds</p>
-
-          <div class="price-row">
-            <span class="price">$10</span>
-            <span class="robux">• 1,200 Robux</span>
+      <div class="container">
+        <div class="video-grid">
+          <div class="video-card reveal">
+            <iframe
+              src="https://www.youtube.com/embed/zDeNb8e52jc"
+              title="Example Short 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
 
-          <a class="btn primary full" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noopener">ORDER HERE</a>
-        </div>
-      </article>
-
-      <!-- 3 -->
-      <article class="card">
-        <img src="assets/bundle-3.png" alt="Bundle 3" class="card-img" />
-        <div class="card-body">
-          <h3 class="card-title">3 VIDEOS</h3>
-          <p class="card-sub">15–30 seconds</p>
-
-          <div class="price-row">
-            <span class="price">$27</span>
-            <span class="robux">• 3,600 Robux</span>
+          <div class="video-card reveal">
+            <iframe
+              src="https://www.youtube.com/embed/WmLmSFz94vs"
+              title="Example Short 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
 
-          <a class="btn primary full" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noopener">ORDER HERE</a>
+          <div class="video-card reveal">
+            <iframe
+              src="https://www.youtube.com/embed/ROsUu9nxHYM"
+              title="Example Short 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <!-- 5 -->
-      <article class="card">
-        <img src="assets/bundle-5.png" alt="Bundle 5" class="card-img" />
-        <div class="card-body">
-          <h3 class="card-title">5 VIDEOS</h3>
-          <p class="card-sub">15–30 seconds</p>
+    <!-- BUNDLES -->
+    <section id="bundles" class="section">
+      <h2 class="section-title">BUNDLES</h2>
 
-          <div class="price-row">
-            <span class="price">$40</span>
-            <span class="robux">• 6,000 Robux</span>
+      <div class="container">
+        <div class="bundle-grid">
+
+          <div class="bundle-card reveal">
+            <img src="assets/bundle-1.png" alt="1 bundle" class="bundle-img">
+            <div class="bundle-actions">
+              <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
+            </div>
           </div>
 
-          <a class="btn primary full" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noopener">ORDER HERE</a>
-        </div>
-      </article>
-
-      <!-- 10 -->
-      <article class="card">
-        <img src="assets/bundle-10.png" alt="Bundle 10" class="card-img" />
-        <div class="card-body">
-          <h3 class="card-title">10 VIDEOS</h3>
-          <p class="card-sub">15–30 seconds</p>
-
-          <div class="price-row">
-            <span class="price">$75</span>
-            <span class="robux">• 12,000 Robux</span>
+          <div class="bundle-card reveal">
+            <img src="assets/bundle-3.png" alt="3 bundle" class="bundle-img">
+            <div class="bundle-actions">
+              <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
+            </div>
           </div>
 
-          <a class="btn primary full" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noopener">ORDER HERE</a>
-        </div>
-      </article>
-
-      <!-- Video + Short bundle -->
-      <article class="card">
-        <img src="assets/bundle-video.png" alt="Video + Shorts Bundle" class="card-img" />
-        <div class="card-body">
-          <h3 class="card-title">VIDEO + SHORT BUNDLE</h3>
-          <p class="card-sub">1 video + 3 shorts from video</p>
-
-          <div class="price-row">
-            <span class="price">$85</span>
-            <span class="robux">• (Robux optional)</span>
+          <div class="bundle-card featured reveal">
+            <div class="badge">Most Popular</div>
+            <img src="assets/bundle-5.png" alt="5 bundle" class="bundle-img">
+            <div class="bundle-actions">
+              <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
+            </div>
           </div>
 
-          <a class="btn primary full" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noopener">ORDER HERE</a>
+          <div class="bundle-card reveal">
+            <img src="assets/bundle-10.png" alt="10 bundle" class="bundle-img">
+            <div class="bundle-actions">
+              <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
+            </div>
+          </div>
+
+          <div class="bundle-card reveal">
+            <img src="assets/bundle-video.png" alt="Video + short bundle" class="bundle-img">
+            <div class="bundle-actions">
+              <a class="btn" href="https://discord.gg/GWy3zvjZhP" target="_blank" rel="noreferrer">ORDER HERE</a>
+            </div>
+          </div>
+
         </div>
-      </article>
-    </div>
 
-    <div class="note reveal">
-      <strong>Payment:</strong> PayPal (USD) or Robux. You’ll get instructions after you open a ticket in Discord.
-    </div>
-  </section>
+        <p class="fineprint">
+          Click <b>ORDER HERE</b> to join the server and open a ticket. Payment happens through Discord.
+        </p>
+      </div>
+    </section>
 
-  <!-- SECTION: REVIEWS -->
-  <section class="section" id="reviews">
-    <h2 class="section-title reveal">REVIEWS</h2>
+    <!-- REVIEWS -->
+    <section id="reviews" class="section section-soft">
+      <h2 class="section-title">REVIEWS</h2>
 
-    <div class="review-grid reveal">
-      <!-- Name them like: review-1.png, review-2.png, review-3.png -->
-      <img class="review-img" src="assets/review-1.png" alt="Review 1">
-      <img class="review-img" src="assets/review-2.png" alt="Review 2">
-      <img class="review-img" src="assets/review-3.png" alt="Review 3">
-    </div>
+      <div class="container">
+        <div class="reviews-grid">
+          <img src="assets/review-1.jpg" alt="Client review 1" class="review-img reveal">
+          <img src="assets/review-2.jpg" alt="Client review 2" class="review-img reveal">
+          <img src="assets/review-3.jpg" alt="Client review 3" class="review-img reveal">
+        </div>
+      </div>
+    </section>
 
-    <div class="contact reveal">
-      <div class="contact-title">ADD ME</div>
-      <div class="contact-line">discord: <span class="discordTag">.hxvac</span></div>
-      <a class="btn outline" href="https://discord.gg/SxYnrfGTDa" target="_blank" rel="noopener">JOIN DISCORD</a>
-    </div>
-  </section>
+    <!-- ADD ME -->
+    <section id="addme" class="section addme">
+      <h2 class="section-title">ADD ME</h2>
+      <p class="addme-line">
+        discord: <span class="discord-handle copy-discord" data-copy=".hxvac">.hxvac</span>
+      </p>
+      <p class="tiny">Click the Discord handle to copy.</p>
+    </section>
 
-  <footer class="footer">
-    <div>© <span id="year"></span> Hxvac Studio</div>
-  </footer>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Hxvac Studio</div>
+      </div>
+    </footer>
+  </main>
 
-  <script src="script.js"></script>
+  <!-- Cache-bust: bump v= if updates don't show -->
+  <script src="script.js?v=20"></script>
 </body>
 </html>
